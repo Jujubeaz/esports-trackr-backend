@@ -1,4 +1,6 @@
 module.exports = {
   auth: require('./auth'),
-  users: require('./users')
+  users: require('./users'),
+  matches: require('./matches'),
+  comments: require('./comments')
 }

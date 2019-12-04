@@ -8,10 +8,15 @@ const ctrl = require('../controllers');
 router.get('/all', ctrl.matches.showAll);
 
 //GET find by id
-router.get('/id', ctrl.matches.show);
+router.get('/:id', ctrl.matches.show);
 
 //POST new match
-router.post('/new', ctrl.match.newMatch);
+router.post('/new', ctrl.matches.newMatch);
 
-//UPDATE add comment
-router.update('/newComment', ctrl.match.newComment);
+//UPDATE match
+router.put('/:id', ctrl.matches.update);
+
+//DELETE all matches
+router.delete('/yeet', ctrl.matches.yeet);
+
+module.exports = router;
