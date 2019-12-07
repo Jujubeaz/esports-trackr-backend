@@ -1,5 +1,20 @@
 const db = require('../models');
 
+//GET all media
+const showAll = (req, res) => {
+  db.Media.find({})
+  .exec((err, allMedia) => {
+    if (err) {
+      return console.log(err)
+    };
+    res.json({
+      status: 200,
+      count: allMedia.length,
+      data: allMedia
+    });
+  });
+};
+
 //GET media by teamId
 const getByTeamId = (req, res) => {
   db.Media.findOne({teamId:req.params.teamId}, (err, teamMedia)=> {
@@ -42,6 +57,7 @@ const yeet = (req, res) => {
 };
 
 module.exports = {
+  showAll,
   getByTeamId,
   newMedia,
   yeet

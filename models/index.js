@@ -14,5 +14,6 @@ mongoose.connect(dbUrl, {
 module.exports = {
   User: require('./User'),
   Match: require('./Match'),
-  Comment: require('./Comment')
+  Comment: require('./Comment'),
+  Media: require('./Media')
 };
