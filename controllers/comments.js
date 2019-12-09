@@ -18,17 +18,10 @@ const addComment = (req, res) => {
   const commentData = {...req.body, user: req.session.currentUser.id, match: req.params.matchId}
   db.Comment.create(commentData, (err, createdComment) => {
     if (err) return console.log(err);
-    db.Match.findById(createdComment.match, (err, foundMatch) => {
-      if (err) return console.log(err);
-      foundMatch.comments.push(createdComment._id);
-      foundMatch.save((err, savedMatch) => {
-        if (err) console.log(err);
-        res.json({
-          status: 200,
-          data: savedMatch
-        });
-      });
-    });
+    res.json({
+      status: 201,
+      data: createdComment
+    })
   });
 };
 
