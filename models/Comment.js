@@ -11,8 +11,8 @@ const CommentSchema = mongoose.Schema({
     ref: 'User'
   },
   match:{
-    type: Schema.Types.ObjectId,
-    ref: 'Match'
+    type: String,
+    required: true
   },
   createdAt: {
     type: Date,
