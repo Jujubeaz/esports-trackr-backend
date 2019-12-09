@@ -4,6 +4,9 @@ const ctrl = require('../controllers');
 
 //PATH = /api/v1/comments
 
+//GET all comments
+router.get('/all', ctrl.comments.all);
+
 //POST new comment
 router.post('/:matchId/newComment', ctrl.comments.addComment);
 
