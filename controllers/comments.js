@@ -26,6 +26,17 @@ const addComment = (req, res) => {
   });
 };
 
+//PUT edit comment
+const editComment = (req, res) => {
+    db.Comment.findByIdAndUpdate(req.params.commentId, req.body, (err, updatedComment) => {
+      if (err) return res.status(500);
+      res.status(200).json({
+        status: 200,
+        data: updatedComment
+      });
+    });
+};
+
 //Delete One
 const deleteComment = (req, res) => {
   db.Comment.findByIdAndDelete(req.params.commentId, (err, deletedComment) => {
@@ -51,6 +62,7 @@ const yeet = (req, res) => {
 module.exports = {
   all,
   addComment,
+  editComment,
   deleteComment,
   yeet
 }
