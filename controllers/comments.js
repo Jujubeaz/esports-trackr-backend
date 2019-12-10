@@ -2,6 +2,7 @@ const db = require('../models');
 
 const all = (req, res) => {
   db.Comment.find({})
+    .populate('user')
     .exec((err, allComments) => {
       if (err) {
         return console.log(err)
@@ -25,12 +26,24 @@ const addComment = (req, res) => {
   });
 };
 
+//Delete One
+const deleteComment = (req, res) => {
+  db.Comment.findByIdAndDelete(req.params.commentId, (err, deletedComment) => {
+    if (err) return console.log(err);
+    res.json({
+      status: 200,
+      data: deletedComment
+    });
+  });
+};
+
 const yeet = (req, res) => {
   db.Comment.deleteMany({}, (err, deletedComments) => {
     if (err) return console.log(err);
     res.json({
       status: 200,
-      message: 'YEET'
+      message: 'YEET',
+      data: deletedComments
     });
   });
 };
@@ -38,5 +51,6 @@ const yeet = (req, res) => {
 module.exports = {
   all,
   addComment,
+  deleteComment,
   yeet
 }

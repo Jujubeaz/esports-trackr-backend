@@ -10,6 +10,9 @@ router.get('/all', ctrl.comments.all);
 //POST new comment
 router.post('/:matchId/newComment', ctrl.comments.addComment);
 
+//DELETE one comment
+router.delete('/:commentId', ctrl.comments.deleteComment);
+
 //DELETE all comments
 router.delete('/yeet', ctrl.comments.yeet);
 
