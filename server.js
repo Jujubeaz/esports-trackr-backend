@@ -42,6 +42,7 @@ app.get('/', (req, res) => {
   res.send('<h1>ESPORTS TRACKR API</h1>');
 });
 
+
 app.use('/api/v1/auth', routes.auth);
 app.use('/api/v1/users', routes.users);
 app.use('/api/v1/matches', routes.matches);
