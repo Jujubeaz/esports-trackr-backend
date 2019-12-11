@@ -212,66 +212,35 @@ const mediaList = [
       splash: "https://dotesports-media.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2018/08/11115548/fba2b8d8-0765-4fef-9bb6-5fcc53cae6d4.jpg",
     },
     {
-      teamId: "",
-      logo: "",
-      splash: "",
+      teamId: "100000020",
+      logo: "https://www.esportspedia.com/lol/thumb.php?f=UOL_logo.png&width=300",
+      splash: "https://dotesports-media.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2018/11/02170450/28647952127_d02c550324_k.jpg",
     },
     {
-      teamId: "",
-      logo: "",
-      splash: "",
+      teamId: "100000032",
+      logo: "https://www.esportspedia.com/lol/thumb.php?f=MyMosquare.png&width=300",
+      splash: "https://s3.amazonaws.com/battlefy-user-generated-assets-with-permissions%2Fauth0%7C56d838196803fe81122bfb88/facebook_banner.png.1470652992440",
     },
     {
-      teamId: "",
-      logo: "",
-      splash: "",
+      teamId: "100000036",
+      logo: "https://www.esportspedia.com/lol/thumb.php?f=FC_Schalke_04_Esports_logo.png&width=300",
+      splash: "https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2018%2F0824%2Fr419503_1296x729_16%2D9.jpg",
     },
     {
-      teamId: "",
-      logo: "",
-      splash: "",
+      teamId: "100000076",
+      logo: "https://www.esportspedia.com/lol/thumb.php?f=SK_Gaminglogo_square.png&width=300",
+      splash: "https://oddslifenetstorage.blob.core.windows.net/esportsinsider/2019/11/SK-Gaming-SMITE-World-Championship.jpg",
     },
     {
-      teamId: "",
-      logo: "",
-      splash: "",
+      teamId: "100000019",
+      logo: "https://www.esportspedia.com/lol/thumb.php?f=Team_Vitalitylogo_square.png&width=300",
+      splash: "https://image.redbull.com/rbcom/010/2016-08-23/1331813511607_4/0100/0/1/vitality-have-a-team-meeting-before-a-league-of-legends-lcs-match.jpg",
     },
     {
-      teamId: "",
-      logo: "",
-      splash: "",
+      teamId: "100000075",
+      logo: "https://www.esportspedia.com/lol/thumb.php?f=TeamRogue.png&width=300",
+      splash: "https://cdn.segmentnext.com/wp-content/uploads/2017/10/mossawi_687315532471_20160821022851_142378000076.png",
     },
-    {
-      teamId: "",
-      logo: "",
-      splash: "",
-    },
-    {
-      teamId: "",
-      logo: "",
-      splash: "",
-    },
-    {
-      teamId: "",
-      logo: "",
-      splash: "",
-    },
-    {
-      teamId: "",
-      logo: "",
-      splash: "",
-    },
-    {
-      teamId: "",
-      logo: "",
-      splash: "",
-    },
-    {
-      teamId: "",
-      logo: "",
-      splash: "",
-    },
-    
 ];
 
 db.Media.remove({}, () => {
