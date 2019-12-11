@@ -25,7 +25,8 @@ const register = (req, res) => {
 
         db.User.create(newUser, (err, savedUser) => {
           if (err) return res.status(500).json({ status: 500, message: err});
-          res.status(201).json({ status: 201, message: savedUser });
+          req.session.currentUser = { id: savedUser._id }
+          res.status(201).json({ status: 201, data: savedUser });
         });
       });
     });

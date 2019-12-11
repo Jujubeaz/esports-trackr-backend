@@ -12,7 +12,7 @@ const CommentSchema = mongoose.Schema({
   },
   match:{
     type: String,
-    required: true
+    required: [true, 'comment must have a match ID']
   },
   createdAt: {
     type: Date,
