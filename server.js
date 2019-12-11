@@ -13,7 +13,7 @@ const routes = require('./routes');
 
 //CORS
 const corsOptions = {
-  origin: [`http://localhost:3000`],
+  origin: [`http://localhost:3000`, 'https://esports-trackr-frontend.herokuapp.com'],
   credentials: true,
   optionsSuccessStatus: 200
 };
@@ -41,6 +41,7 @@ app.use(session({
 app.get('/', (req, res) => {
   res.send('<h1>ESPORTS TRACKR API</h1>');
 });
+
 
 app.use('/api/v1/auth', routes.auth);
 app.use('/api/v1/users', routes.users);
