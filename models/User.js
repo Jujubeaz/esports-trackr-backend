@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const UserSchema = mongoose.Schema({
   name: {
@@ -14,10 +15,13 @@ const UserSchema = mongoose.Schema({
     type: String,
     required: [true, 'Password is required'],
   },
+  favTeams: [String],
+  favLeagues: [String],
+  favGames: [String],
   createdAt: {
     type: Date,
     default: Date.now,
-  }
+  },
 });
 
 const User = mongoose.model('User', UserSchema);
